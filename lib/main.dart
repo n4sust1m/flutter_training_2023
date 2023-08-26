@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_training_2023/domain/align/model.dart';
+import 'package:flutter_training_2023/widgets/my_colored_box_list.dart';
 
 void main() {
   runApp(const MyApp());
@@ -102,73 +104,26 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: const [
-                SizedBox(
-                  width: 40,
-                  height: 40,
-                  child: ColoredBox(
-                    color: Color(0xFF0000FF),
-                  ),
-                ),
-                SizedBox(width: 10),
-                SizedBox(
-                  width: 40,
-                  height: 40,
-                  child: ColoredBox(
-                    color: Color(0xFF0000FF),
-                  ),
-                ),
-              ],
+            const MyColoredBoxList(
+              width: 40,
+              height: 40,
+              align: AlignDirection.start,
+              amount: 2,
+              color: Color(0xFF0000FF),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
-                SizedBox(
-                  width: 60,
-                  height: 60,
-                  child: ColoredBox(
-                    color: Color(0xFFFF0000),
-                  ),
-                ),
-                SizedBox(width: 10),
-                SizedBox(
-                  width: 60,
-                  height: 60,
-                  child: ColoredBox(
-                    color: Color(0xFFFF0000),
-                  ),
-                ),
-                SizedBox(width: 10),
-                SizedBox(
-                  width: 60,
-                  height: 60,
-                  child: ColoredBox(
-                    color: Color(0xFFFF0000),
-                  ),
-                ),
-              ],
+            const MyColoredBoxList(
+              width: 60,
+              height: 60,
+              align: AlignDirection.center,
+              amount: 3,
+              color: Color(0xFFFF0000),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: const [
-                SizedBox(
-                  width: 80,
-                  height: 80,
-                  child: ColoredBox(
-                    color: Color(0xFF00FF00),
-                  ),
-                ),
-                SizedBox(width: 10),
-                SizedBox(
-                  width: 80,
-                  height: 80,
-                  child: ColoredBox(
-                    color: Color(0xFF00FF00),
-                  ),
-                ),
-              ],
+            const MyColoredBoxList(
+              width: 80,
+              height: 80,
+              align: AlignDirection.end,
+              amount: 2,
+              color: Color(0xFF00FF00),
             ),
           ],
         ),
