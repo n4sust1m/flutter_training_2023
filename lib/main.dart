@@ -95,22 +95,80 @@ class _MyHomePageState extends State<MyHomePage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const SizedBox(
-              width: 50,
-              height: 50,
-              child: ColoredBox(color: Color(0xFFFFFF00)),
-            ),
-            const SizedBox(
-              width: 100,
-              height: 100,
-              child: ColoredBox(color: Color(0xFFFF0000)),
-            ),
             const Text(
               'You have pushed the button this many times:',
             ),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: const [
+                SizedBox(
+                  width: 40,
+                  height: 40,
+                  child: ColoredBox(
+                    color: Color(0xFF0000FF),
+                  ),
+                ),
+                SizedBox(width: 10),
+                SizedBox(
+                  width: 40,
+                  height: 40,
+                  child: ColoredBox(
+                    color: Color(0xFF0000FF),
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: const [
+                SizedBox(
+                  width: 60,
+                  height: 60,
+                  child: ColoredBox(
+                    color: Color(0xFFFF0000),
+                  ),
+                ),
+                SizedBox(width: 10),
+                SizedBox(
+                  width: 60,
+                  height: 60,
+                  child: ColoredBox(
+                    color: Color(0xFFFF0000),
+                  ),
+                ),
+                SizedBox(width: 10),
+                SizedBox(
+                  width: 60,
+                  height: 60,
+                  child: ColoredBox(
+                    color: Color(0xFFFF0000),
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: const [
+                SizedBox(
+                  width: 80,
+                  height: 80,
+                  child: ColoredBox(
+                    color: Color(0xFF00FF00),
+                  ),
+                ),
+                SizedBox(width: 10),
+                SizedBox(
+                  width: 80,
+                  height: 80,
+                  child: ColoredBox(
+                    color: Color(0xFF00FF00),
+                  ),
+                ),
+              ],
             ),
           ],
         ),
