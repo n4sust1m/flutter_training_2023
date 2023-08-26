@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_training_2023/domain/align/model.dart';
+import 'package:flutter_training_2023/widgets/my_colored_box_list.dart';
 
 void main() {
   runApp(const MyApp());
@@ -95,22 +97,33 @@ class _MyHomePageState extends State<MyHomePage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const SizedBox(
-              width: 50,
-              height: 50,
-              child: ColoredBox(color: Color(0xFFFFFF00)),
-            ),
-            const SizedBox(
-              width: 100,
-              height: 100,
-              child: ColoredBox(color: Color(0xFFFF0000)),
-            ),
             const Text(
               'You have pushed the button this many times:',
             ),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
+            ),
+            const MyColoredBoxList(
+              width: 40,
+              height: 40,
+              align: AlignDirection.start,
+              amount: 2,
+              color: Color(0xFF0000FF),
+            ),
+            const MyColoredBoxList(
+              width: 60,
+              height: 60,
+              align: AlignDirection.center,
+              amount: 3,
+              color: Color(0xFFFF0000),
+            ),
+            const MyColoredBoxList(
+              width: 80,
+              height: 80,
+              align: AlignDirection.end,
+              amount: 2,
+              color: Color(0xFF00FF00),
             ),
           ],
         ),
